@@ -1,6 +1,6 @@
 # Vision Transformer for Skin Lesion Classification
 
-**Transfer Learning | Medical Image Classification **
+**Transfer Learning | Medical Image Classification**
 
 ## 1. Description
 
