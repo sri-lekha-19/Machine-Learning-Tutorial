@@ -32,8 +32,8 @@
 - **Transformer encoder:** Used 12 encoder layers with multi-head self-attention, feed-forward networks, residual connections, and layer normalization.
 - **Classification:** Extracted the `[CLS]` token representation and passed it through a task-specific classification head for seven-class prediction.
 - **Transfer-learning strategy:**
-  - **Stage 1 — Feature adaptation:** Froze the pretrained transformer backbone and trained the new classification head.
-  - **Stage 2 — Fine-tuning:** Unfroze the final transformer blocks and fine-tuned them using a smaller learning rate.
+  - **Stage 1 - Feature adaptation:** Froze the pretrained transformer backbone and trained the new classification head.
+  - **Stage 2 - Fine-tuning:** Unfroze the final transformer blocks and fine-tuned them using a smaller learning rate.
 
 ## 5. Training and Validation
 
@@ -61,17 +61,9 @@
 - Training–validation loss divergence indicated overfitting, motivating early stopping.
 - Visualised attention maps using final-layer `[CLS]`-to-patch attention, averaged across attention heads, to inspect the model's spatial attention patterns.
 
-### Limitations and Future Work
-
-- Investigate class-weighted loss and weighted random sampling to improve minority-class recognition.
-- Evaluate per-class precision, recall, F1-score, and test-set performance to obtain a more complete assessment.
-- Explore calibration and additional interpretability methods to understand prediction reliability.
-- Treat the model as an experimental research implementation, **not a clinically validated diagnostic system**.
-
 ## 7. References
 
 1. Dosovitskiy, A. et al. (2021). *An Image is Worth 16×16 Words: Transformers for Image Recognition at Scale.* International Conference on Learning Representations (ICLR). [Paper](https://arxiv.org/abs/2010.11929)
 2. Tschandl, P., Rosendahl, C., and Kittler, H. (2018). *The HAM10000 Dataset, a Large Collection of Multi-Source Dermatoscopic Images of Common Pigmented Skin Lesions.* Scientific Data, 5, 180161. [Paper](https://doi.org/10.1038/sdata.2018.161)
 3. Hugging Face. *Transformers Documentation.* [Documentation](https://huggingface.co/docs/transformers)
-4. **Implementation:** [Machine-Learning-Tutorial — GitHub Repository](https://github.com/sri-lekha-19/Machine-Learning-Tutorial)
-5. **Experiment notebook:** [Google Colab — Model Implementation](https://colab.research.google.com/drive/1KL5EdLBBwsPIy7aZMjit-qDqybWtfpAw?usp=sharing)
+4. **Experiment notebook:** [Google Colab — Model Implementation](https://colab.research.google.com/drive/1KL5EdLBBwsPIy7aZMjit-qDqybWtfpAw?usp=sharing)
